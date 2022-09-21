@@ -1,39 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>Web App</title>
+        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
-    <!-- title and favicon -->
-    <title>Web App</title>
-    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <!-- see https://fonts.google.com/ -->
 
-    <!-- fonts -->
-    <!-- see https://fonts.google.com/ -->
+        <!-- css -->
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <!-- add link for page specific css -->
+    </head>
 
-    <!-- css -->
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <!-- add link for page specific css -->
+    <body>
+        <header>
+            <img class="logo" src="assets/letroll.png" alt="logo" />
+            <h1>Arguing with People on the Internet</h1>
+        </header>
 
-</head>
+        <main>
+            <section class="banner" id="scoreboard">
+                You have not defeated any other members of the internet
+            </section>
 
-<body>
-    <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
-    </header>
+            <section class="banner" id="result-display">Click on a victim to get started</section>
 
-    <main>
+            <section class="player card">
+                <p id="player-hp" class="stat">10</p>
+                <img id="player-image" src="assets/hero.png" />
+            </section>
 
-    </main>
-
-</body>
-
+            <section class="goblins-section">
+                <form id="add-goblin-form">
+                    <label>
+                        <div>New Keyboard Warrior</div>
+                        <div class="controls">
+                            <input name="name" required />
+                            <button>+</button>
+                        </div>
+                    </label>
+                </form>
+                <ul id="goblin-list">
+                    <li class="goblin card">
+                        <span class="stat">4</span>
+                        <img src="assets/goblin.png" />
+                        <span class="name">Impy really long name</span>
+                    </li>
+                    <li class="goblin card">
+                        <span class="stat">4</span>
+                        <img src="assets/tree.png" />
+                        <span class="name">Impy really long name</span>
+                    </li>
+                    <li class="goblin card">
+                        <span class="stat">4</span>
+                        <img src="assets/cthulhu.png" />
+                        <span class="name">Cthulhu</span>
+                    </li>
+                </ul>
+                <button id="remove-button">Remove Scrubs and N00bs</button>
+            </section>
+        </main>
+    </body>
 </html>
+<!----BASIC HTML-->
